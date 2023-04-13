@@ -22,3 +22,29 @@ def set_config(c):
     c.extra_compression = False
     c.intermittent_model_saving = False
     c.intermittent_saving_patience = 100
+    c.type_list = [
+        "int",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+        "float64",
+    ]
