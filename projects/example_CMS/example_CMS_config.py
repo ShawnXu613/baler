@@ -24,8 +24,8 @@ def set_config(c):
     c.intermittent_saving_patience = 100
     c.type_list = [
         "int",
-        "float64",
-        "float64",
+        "int",
+        "int",
         "float64",
         "float64",
         "float64",
