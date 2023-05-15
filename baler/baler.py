@@ -207,21 +207,21 @@ def perform_decompression(model_name, project_path, config):
     # Converting back to numpyarray
     decompressed = helper.detacher(decompressed)
 
-   # try:
-   #     type_list = config.type_list
-   #     decompressed = np.transpose(decompressed)
-   #     #print(decompressed)
-   #     for index, column in enumerate(decompressed):
-   #         #print(type(decompressed[index]))
-   #         if type_list[index] == "int":
-   #             decompressed[index] = np.round(decompressed[index],0)
-   #             decompressed[index] = decompressed[index].astype(type_list[index])
-   #             print(decompressed[index])
+    try:
+        type_list = config.type_list
+        decompressed = np.transpose(decompressed)
+        #print(decompressed)
+        for index, column in enumerate(decompressed):
+            #print(type(decompressed[index]))
+            if type_list[index] == "int":
+                decompressed[index] = np.round(decompressed[index],0)
+                decompressed[index] = decompressed[index].astype(type_list[index])
+                print(decompressed[index])
         #print(decompressed[0])
-    #    decompressed = np.transpose(decompressed)
-    #    print(decompressed[0])
-   # except AttributeError:
-    #    pass
+        decompressed = np.transpose(decompressed)
+        #print(decompressed[0])
+    except AttributeError:
+        pass
 
     if config.apply_normalization:
         print("Un-normalizing...")
